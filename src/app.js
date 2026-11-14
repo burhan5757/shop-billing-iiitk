@@ -4,6 +4,7 @@ import details from "./config/db.js";
 import adminRoutes from './routes/adminRoutes.js';
 import auth from "./middlewares/authMiddleware.js";
 import productRoutes from './routes/productRoutes.js';
+import billRoutes from './routes/billRoutes.js';
 const PORT = 3000;
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/admin', adminRoutes);
 app.use('/api/products',productRoutes);
+app.use('/api/bills', billRoutes);
 
 app.get('/api/health',(req,res)=>{
     res.json({
