@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use('/api/admin', adminRoutes);
-app.use('/api/products', authMiddleware, productRoutes);
+app.use('/api/products',productRoutes);
 
 app.get('/api/health',(req,res)=>{
     res.json({
@@ -34,7 +34,7 @@ app.get('/api/db-test',async (req,res)=>{
     }
 })
 
-app.get('api/admin/test',auth,(req,res)=>{
+app.get('/api/admin/test',auth,(req,res)=>{
     res.json({
         msg: 'You are authenticated',
         admin: req.admin

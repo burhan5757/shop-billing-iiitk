@@ -16,3 +16,52 @@ export const getProducts = async (req,res) => {
         });
     }
 }
+
+export const addProduct = async (req, res) => {
+    try {
+        const { product_name, category, price, quantity } = req.body;
+
+        const [query] = await details.query(
+            `INSERT INTO products (product_name, category, price, quantity)
+             VALUES (?, ?, ?, ?)`,
+            [product_name, category, price, quantity]
+        );
+
+        res.status(201).json({
+            msg: 'Product added successfully',
+            product_id: query.insertId
+        });
+
+    } catch (err) {
+        console.error(err.message);
+
+        res.status(500).json({
+            msg: 'Internal server error'
+        });
+    }
+};
+
+export const deleteProduct = async (req,res) => {
+    try {
+        const {id} = req.params;
+
+        const [query] = await details.query('update products set is_active = false where product_id = ?',[id])
+
+        if(query.affectedRows === 0){
+            return res.status(404).json({
+                msg: 'Product not found'
+            })
+        }
+        
+        res.status(200).json({
+            msg: 'Deleted Successfully'
+        })
+
+    } catch (err) {
+        console.error(err.message)
+
+        res.status(500).json({
+            msg: 'Internal server error'
+        })
+    }
+}
