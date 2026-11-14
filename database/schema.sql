@@ -1,1 +1,0 @@
--- TODO: Define the MySQL database and tables for the shop billing system.
