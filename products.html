@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <div class="user-id">
+            <h3>user(placeholder)</h3>
+        </div>
+    </header>
+    <main>
+        <aside class="side-panel">
+            <img src="./images/cart-logo.png">
+            <h3>Shop Billing</h3>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="main-content">
+            <h1>Products</h1>
+            <p>Browse products available in the store</p>
+            <div class="search-bar">
+                <input type="search" placeholder="Search products by name...">
+                <select>
+                    <option value="">All Categories</option>
+                    <!-- categories fetched from backend -->
+                </select>
+            </div>
+        </section>
+
+        <section class="cart-items">
+            <h2>All Products</h2>
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price (₹)</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- product rows fetched from backend go here -->
+                    <tr>
+                        <td>P001</td>
+                        <td><img class="prod-img" src="" alt="product image"></td>
+                        <td>Maggi Noodles</td>
+                        <td>Food</td>
+                        <td>40.00</td>
+                        <td><span class="stock-badge low">5</span></td>
+                        <td><button class="add-btn">+ Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>P002</td>
+                        <td><img class="prod-img" src="" alt="product image"></td>
+                        <td>Tomato Sauce</td>
+                        <td>Food</td>
+                        <td>95.00</td>
+                        <td><span class="stock-badge medium">8</span></td>
+                        <td><button class="add-btn">+ Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>P003</td>
+                        <td><img class="prod-img" src="" alt="product image"></td>
+                        <td>Biscuits Pack</td>
+                        <td>Snacks</td>
+                        <td>30.00</td>
+                        <td><span class="stock-badge medium">10</span></td>
+                        <td><button class="add-btn">+ Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>P004</td>
+                        <td><img class="prod-img" src="" alt="product image"></td>
+                        <td>Detergent Powder</td>
+                        <td>Household</td>
+                        <td>120.00</td>
+                        <td><span class="stock-badge high">24</span></td>
+                        <td><button class="add-btn">+ Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>P005</td>
+                        <td><img class="prod-img" src="" alt="product image"></td>
+                        <td>Amul Milk</td>
+                        <td>Dairy</td>
+                        <td>28.00</td>
+                        <td><span class="stock-badge high">15</span></td>
+                        <td><button class="add-btn">+ Add to Cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <div class="user-id">
+            <h3>admin(placeholder)</h3>
+        </div>
+    </header>
+    <main>
+        <aside class="side-panel">
+            <img src="./images/cart-logo.png">
+            <h3>Shop Billing</h3>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main-content">
+            <h1>Cart</h1>
+            <p>Add product to the cart and generate the bill</p>
+            <div>
+                <input type="search" placeholder="search product by name...">
+                <div class="quantity">
+                    <label for="quantity">Qty</label>
+                    <input type="number" value="1" min="1">
+                </div>
+                <button type="button">+ Add to cart</button>
+            </div>
+        </section>
+        <section class="cart-items">
+            <h2>Cart Items</h2>
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- js will add product here -->
+                </tbody>
+
+            </table>
+        </section>
+        <aside class="bill-summary">
+
+            <h2>Bill Summary</h2>
+
+            <div class="bill-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹0.00</strong>
+            </div>
+
+            <div class="bill-row discount-row">
+                <span>Discount</span>
+
+                <div class="discount-input">
+                    <span>%</span>
+                </div>
+            </div>
+
+            <div class="bill-row total-row">
+                <strong>Total Amount</strong>
+                <strong id="total-amount">₹0.00</strong>
+            </div>
+
+            <div class="bill-actions">
+                <button class="generate-btn">Generate Bill</button>
+                <button class="clear-btn">Clear Cart</button>
+            </div>
+
+        </aside>
+    </main>
+
+</body>
+</html>

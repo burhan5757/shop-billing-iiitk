@@ -1,0 +1,96 @@
+
+/* search bar + filter row */
+.search-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-bar input[type="search"] {
+    flex: 1;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #ccd4df;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.search-bar select {
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #ccd4df;
+    border-radius: 9px;
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+/* remove the quantity + button row that comes from cart.css main-content > div */
+.main-content > div {
+    flex-wrap: nowrap;
+}
+
+/* product image inside table */
+.prod-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #f4f6f9;
+    display: block;
+    margin: 0 auto;
+}
+
+/* stock badge colors */
+.stock-badge {
+    display: inline-block;
+    min-width: 36px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.stock-badge.low {
+    background-color: #fde8e8;
+    color: #c0392b;
+}
+
+.stock-badge.medium {
+    background-color: #fef3cd;
+    color: #856404;
+}
+
+.stock-badge.high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* add to cart button inside table */
+.add-btn {
+    height: 38px;
+    padding: 0 16px;
+    background-color: #0876bd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.add-btn:hover {
+    background-color: #05639f;
+}
+
+/* active nav link */
+.navbar a.active {
+    background-color: #e6f2fc;
+    color: #0874bd;
+    font-weight: 600;
+}
+
+

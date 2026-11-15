@@ -1,0 +1,296 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fc;
+    color: #171717;
+}
+
+/* header */
+
+header {
+    height: 88px;
+    margin-left: 280px;
+    background-color: white;
+    border-bottom: 1px solid #e1e5eb;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+}
+
+.user-id h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* sidebar */
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #e1e5eb;
+    padding: 15px;
+}
+
+.side-panel img {
+    width: 45px;
+    vertical-align: middle;
+}
+
+.side-panel > h3 {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.navbar {
+    margin-top: 55px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    display: block;
+    padding: 17px 20px;
+    text-decoration: none;
+    color: #222;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    background-color: #e6f2fc;
+    color: #0874bd;
+}
+
+/* main content */
+
+main {
+    margin-left: 280px;
+    padding: 25px;
+    display: grid;
+    gap: 22px;
+}
+
+/* page heading */
+
+.main-content h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.main-content p {
+    font-size: 19px;
+    color: #626b7c;
+    margin-bottom: 38px;
+}
+
+/* add product card */
+
+.main-content > div {
+    background-color: white;
+    border: 2px solid #e5e9ef;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.main-content input[type="search"] {
+    flex: 1;
+    min-width: 100px;
+    height: 53px;
+    padding: 0 15px;
+    border: 1px solid #ccd4df;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity label {
+    font-size: 17px;
+}
+
+.quantity input {
+    width: 115px;
+    height: 53px;
+    padding: 10px;
+    border: 1px solid #ccd4df;
+    border-radius: 9px;
+    font-size: 17px;
+}
+
+.main-content button {
+    height: 53px;
+    padding: 0 22px;
+    background-color: #0876bd;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-content button:hover {
+    background-color: #05639f;
+}
+
+/* cart items */
+
+.cart-items {
+    background-color: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    padding: 22px;
+    min-height: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.cart-items h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#item-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#item-table th {
+    background-color: #e9edf2;
+    padding: 15px 8px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+#item-table th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+#item-table th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+#item-table td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #e2e6eb;
+    font-size: 16px;
+}
+
+#item-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* bill summary */
+
+.bill-summary {
+    background-color: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    padding: 22px;
+    min-height: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.bill-summary h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.bill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 8px;
+    border-top: 1px solid #e5e9ef;
+    font-size: 18px;
+}
+
+.bill-row strong {
+    font-size: 18px;
+}
+
+.discount-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 45px;
+    border: 1px solid #ccd4df;
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    font-size: 17px;
+}
+
+.total-row {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.total-row strong:last-child {
+    color: #0876bd;
+    font-size: 25px;
+}
+
+/* bill buttons */
+
+.bill-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 5px;
+}
+
+.bill-actions button {
+    height: 63px;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.generate-btn {
+    background-color: #0876bd;
+    color: white;
+    border: none;
+}
+
+.generate-btn:hover {
+    background-color: #05639f;
+}
+
+.clear-btn {
+    background-color: white;
+    color: #171717;
+    border: 1px solid #ccd4df;
+}
+
+.clear-btn:hover {
+    background-color: #f1f4f7;
+}
+
+
