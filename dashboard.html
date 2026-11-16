@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta author="admin" content="admin page">
+        <link rel="stylesheet" href="dash.css">    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <title>Dashboard</title>
+    </head>
+    <body>
+     <div id="container">
+            <!----Side panel -->  
+        <aside class="side-panel">
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                               shopping_cart
+                </span>
+                
+                <p>Shop Billing <br>Admin Panel</p>
+            </div>
+            <hr>
+
+            <nav>
+             <ul>
+                <li class="active">
+                    <a href="dashboard.html" area-current="page">
+                        <span>⌂</span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        <span>▣</span>
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        <span>🛒</span>
+                        Cart / Billing
+                    </a>
+                </li>
+             </ul>
+            </nav>
+            <div class="logout">
+               <a href="login.html">↪ Logout</a>
+            </div>
+          </aside> 
+
+     <main class="main-content">
+                <!-- panel  -->
+
+        <div class="admin-profile">
+           <div class="profile-icon">A</div>
+           <span>Admin</span>
+           <!-- <span class="material-symbols-outlined">
+                 keyboard_arrow_down
+           </span> -->
+        </div>
+        <hr>
+    
+         <h2>WELCOME BACK,<span> ADMIN! </span></h2>
+         <p>manage your store and product from here.</p>
+
+
+        <div id="dash">
+         <div class="cards">
+            <div class="icons">
+                <img src="../images/cart.png" alt="Cart" width="45px" height="45px"> 
+                <div class="set">
+                  <h4>Total sales</h4>
+                  <h2>2000</h2>
+               </div>
+            </div>
+            
+         </div>
+         <div class="cards">
+            <div class="icons">
+                <img src="../images/box.png" alt="box" width="45px" height="45px"> 
+                <div class="set">
+                  <h4>Total products</h4>
+                  <h2>100</h2>
+                </div>
+            </div>
+         </div>
+         <div class="cards">
+            <div class="icons">
+                <img src="../images/cust.png" alt="customer" width="45px" height="45px">
+                <div class="set">
+                  <h4>Total Customers</h4>
+                  <h2>200</h2>
+                </div> 
+         </div>
+            
+         </div>
+        </div>
+
+         <div id="alerts">
+            <div id="search">
+                <h3> Product List</h3>
+                <form>
+                  <label for="pro-search"><span class="material-symbols-outlined">
+                              search
+                          </span></label>
+                    <input type="text" placeholder="Enter product name" id="pro-search">
+                </form>
+            </div>
+            <hr>
+            <div id="table">
+                <table>
+                    <thead>
+                     <tr>
+                      <th>ID</th>
+                      <th>Product Name</th>
+                      <th>Category</th>
+                      <th>Price (₹)</th>
+                      <th>Stock</th>
+                      <th>Status</th>
+                     </tr>
+                    </thead> 
+                    
+                    <tbody>
+                     <tr>
+                        <td>1020</td>
+                        <td>Noodles</td>
+                        <td>food</td>
+                        <td>60.00</td>
+                        <td>5</td>
+                        <td>Low</td>
+                     </tr>
+                    </tbody>
+                </table>
+            </div>
+         </div>
+      </main> 
+    </div>
+
+         
+         
+    </body>
+</html>

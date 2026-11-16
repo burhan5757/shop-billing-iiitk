@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta author="admin" content="admin page">
+        <link rel="stylesheet" href="products.css">    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <title>Products</title>
+    </head>
+    <body>
+     <div id="container">
+            <!----Side panel -->  
+        <aside class="side-panel">
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                               shopping_cart
+                </span>
+                
+                <p>Shop Billing <br>Admin Panel</p>
+            </div>
+            <hr>
+
+            <nav>
+             <ul>
+                <li >
+                    <a href="dashboard.html" >
+                        <span>⌂</span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="products.html" area-current="page">
+                        <span>▣</span>
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        <span>🛒</span>
+                        Cart / Billing
+                    </a>
+                </li>
+             </ul>
+            </nav>
+            <div class="logout">
+               <a href="login.html">↪ Logout</a>
+            </div>
+          </aside> 
+
+     
+   <main class="main-content">
+
+          <!-- TOP HEADER -->
+         <div class="admin-profile">
+           <div class="profile-icon">A</div>
+           <span>Admin</span>
+           <!-- <span class="material-symbols-outlined">
+                 keyboard_arrow_down
+           </span> -->
+        </div>
+        <hr>
+
+           <!-- PAGE HEADING -->
+        <div class="page-heading">
+           <h1>Products</h1>
+           <p>Manage your store inventory and product details.</p>
+        </div>
+
+    <!-- SEARCH AND FILTER SECTION -->
+    <div class="product-toolbar">
+
+        <form class="search-box">
+            <input type="text"
+                   placeholder="Search product by name...">
+        </form>
+
+        <select>
+            <option>All Categories</option>
+            <option>Food</option>
+            <option>Snacks</option>
+            <option>Household</option>
+        </select>
+
+        <select>
+            <option>All Stock</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out of Stock</option>
+        </select>
+
+        <button class="add-product">+ Add Product</button>
+
+    </div>
+
+    <!-- PRODUCT TABLE -->
+    <section class="inventory">
+
+        <h2>Product Inventory</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price (₹)</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>P001</td>
+                    <td>Maggi Noodles</td>
+                    <td>Food</td>
+                    <td>40.00</td>
+                    <td>5</td>
+                    <td><span class="low-stock">Low Stock</span></td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>P002</td>
+                    <td>Tomato Sauce</td>
+                    <td>Food</td>
+                    <td>95.00</td>
+                    <td>24</td>
+                    <td><span class="in-stock">In Stock</span></td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>P003</td>
+                    <td>Biscuits Pack</td>
+                    <td>Snacks</td>
+                    <td>30.00</td>
+                    <td>8</td>
+                    <td><span class="low-stock">Low Stock</span></td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+       </section>
+
+     </main>
+    </div>
+
+         
+         
+    </body>
+</html>
