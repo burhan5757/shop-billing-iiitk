@@ -16,7 +16,6 @@ export const createBill = async (req, res) => {
         });
     }
 
-    // Combine duplicate products in the cart
     const cart = new Map();
 
     for (const item of items) {
@@ -73,8 +72,6 @@ export const createBill = async (req, res) => {
                 throw error;
             }
 
-            // Calculate using cents to avoid floating-point
-            // errors with decimal prices
             const unitPriceCents = Math.round(
                 Number(product.price) * 100
             );
@@ -156,7 +153,6 @@ export const createBill = async (req, res) => {
 
 export const getBills = async (req, res) => {
     try {
-        // get all bills with their purchased products
         const [query] = await details.query(`
             SELECT
                 bills.bill_id,
@@ -180,7 +176,6 @@ export const getBills = async (req, res) => {
 
         const bills = new Map();
 
-        // keep products with their respective bills
         for (const row of query) {
             if (!bills.has(row.bill_id)) {
                 bills.set(row.bill_id, {
@@ -194,7 +189,6 @@ export const getBills = async (req, res) => {
                 });
             }
 
-            // Add the product to the bill
             if (row.product_id !== null) {
                 bills.get(row.bill_id).items.push({
                     product_id: row.product_id,
@@ -206,7 +200,6 @@ export const getBills = async (req, res) => {
             }
         }
 
-        // Return all bills with their items
         res.status(200).json({
             bills: Array.from(bills.values())
         });

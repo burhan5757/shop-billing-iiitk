@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <title>Dashboard</title>
+    </head>
+    <body>
+     <div id="container">
+        <aside class="side-panel">
+            <div class="logo">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <p>Shop Billing <br>Admin Panel</p>
+            </div>
+            <hr>
+
+            <nav>
+             <ul>
+                <li class="active">
+                    <a href="dashboard.html" aria-current="page">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#inventory">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#bills">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        Bills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        <span class="material-symbols-outlined">storefront</span>
+                        Open Shop
+                    </a>
+                </li>
+             </ul>
+            </nav>
+            <div class="logout">
+               <a href="login.html" id="logout">↪ Logout</a>
+            </div>
+        </aside>
+
+     <main class="main-content">
+
+        <div class="admin-profile">
+           <div class="profile-icon">A</div>
+           <span>Admin</span>
+        </div>
+        <hr>
+
+        <div id="dash">
+            <div class="cards">
+                <div class="icons">
+                    <span class="material-symbols-outlined">payments</span>
+                    <div class="set">
+                        <h4>Total Sales (₹)</h4>
+                        <h2 id="total-sales">0.00</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="icons">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    <div class="set">
+                        <h4>Total Products</h4>
+                        <h2 id="total-products">0</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="icons">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <div class="set">
+                        <h4>Total Bills</h4>
+                        <h2 id="total-bills">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="msg" class="msg"></p>
+
+        <div class="product-toolbar">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" id="search" placeholder="Search product by name...">
+            </div>
+
+            <select id="category-filter">
+                <option value="">All Categories</option>
+            </select>
+
+            <select id="stock-filter">
+                <option value="">All Stock</option>
+                <option value="high">In Stock</option>
+                <option value="medium">Low Stock</option>
+                <option value="low">Out of Stock</option>
+            </select>
+
+            <button type="button" class="add-product" id="toggle-form">+ Add Product</button>
+        </div>
+
+        <form class="product-form" id="product-form">
+            <input type="text" id="product-name" placeholder="Product name" required>
+            <input type="text" id="product-category" placeholder="Category (e.g. Food)">
+            <input type="number" id="product-price" placeholder="Price (₹)" min="0.01" step="0.01" required>
+            <input type="number" id="product-quantity" placeholder="Stock quantity" min="0" step="1" required>
+            <button type="submit" class="add-product">Save Product</button>
+        </form>
+
+        <section class="inventory" id="inventory">
+            <h2>Product Inventory</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price (₹)</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-rows">
+                        <tr><td colspan="7" class="empty">Loading products...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="inventory" id="bills">
+            <h2>Bills</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bill No.</th>
+                            <th>Date</th>
+                            <th>Items</th>
+                            <th>Payment</th>
+                            <th>Total (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bill-rows">
+                        <tr><td colspan="5" class="empty">Loading bills...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+     </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    </body>
+</html>

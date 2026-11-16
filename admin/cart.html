@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <title>Cart</title>
+    </head>
+    <body>
+     <div id="container">
+        <aside class="side-panel">
+            <div class="logo">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <p>Shop Billing</p>
+            </div>
+            <hr>
+
+            <nav>
+             <ul>
+                <li>
+                    <a href="products.html">
+                        <span class="material-symbols-outlined">storefront</span>
+                        Products
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="cart.html" aria-current="page">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        Cart
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </li>
+             </ul>
+            </nav>
+            <div class="logout">
+               <a href="login.html">
+                   <span class="material-symbols-outlined">admin_panel_settings</span>
+                   Admin Login
+               </a>
+            </div>
+        </aside>
+
+     <main class="main-content">
+
+        <div class="page-heading">
+            <h1>Cart</h1>
+        </div>
+
+        <p id="msg" class="msg"></p>
+
+        <form class="product-toolbar" id="add-form">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input type="search" id="product-search" list="product-options" placeholder="Search product by name...">
+                <datalist id="product-options"></datalist>
+            </div>
+
+            <input type="number" id="add-quantity" value="1" min="1" step="1" aria-label="Quantity">
+
+            <button type="submit" class="add-product">+ Add to cart</button>
+        </form>
+
+        <div class="cart-layout">
+            <section class="inventory">
+                <h2>Cart Items</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Product Name</th>
+                                <th>Price (₹)</th>
+                                <th>Quantity</th>
+                                <th>Total (₹)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-rows">
+                            <tr><td colspan="6" class="empty">Loading cart...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="bill-summary">
+                <h2>Bill Summary</h2>
+
+                <div class="bill-row">
+                    <span>Items</span>
+                    <strong id="item-count">0</strong>
+                </div>
+
+                <div class="bill-row">
+                    <span>Payment Method</span>
+                    <select id="payment-method">
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Card</option>
+                    </select>
+                </div>
+
+                <div class="bill-row total-row">
+                    <strong>Total Amount</strong>
+                    <strong id="total-amount">₹0.00</strong>
+                </div>
+
+                <div class="bill-actions">
+                    <button class="generate-btn" id="generate-bill">Generate Bill</button>
+                    <button class="clear-btn" id="clear-cart">Clear Cart</button>
+                </div>
+            </aside>
+        </div>
+
+     </main>
+    </div>
+
+    <script src="js/cart.js"></script>
+    </body>
+</html>

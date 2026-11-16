@@ -18,8 +18,23 @@ export const getProducts = async (req,res) => {
 }
 
 export const addProduct = async (req, res) => {
+
     try {
         const { product_name, category, price, quantity } = req.body;
+
+
+        if (
+            !product_name?.trim() ||
+            !Number.isFinite(Number(price)) ||
+            Number(price) <= 0 ||
+            quantity === undefined ||
+            !Number.isInteger(Number(quantity)) ||
+            Number(quantity) < 0
+        ) {
+            return res.status(400).json({
+                msg: 'Invalid product details'
+            });
+        }
 
         const [query] = await details.query(
             `INSERT INTO products (product_name, category, price, quantity)

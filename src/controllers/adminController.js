@@ -9,7 +9,8 @@ export const login = (req,res) => {
     }
 
     const token = jwt.sign(
-        {user},process.env.JWT_SECRET
+        {user},process.env.JWT_SECRET,
+        { expiresIn: '1d' }
     )
 
     res.json({

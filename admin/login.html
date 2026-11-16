@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <title>Admin Login</title>
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="login-card">
+                <div class="logo">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <p>Shop Billing <br>Admin Panel</p>
+                </div>
+
+                <p id="msg" class="msg"></p>
+
+                <form id="login-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+
+                    <button type="submit" class="add-product">Login</button>
+                </form>
+
+                <a href="products.html" class="back-link">Back to shop</a>
+            </div>
+        </div>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>
